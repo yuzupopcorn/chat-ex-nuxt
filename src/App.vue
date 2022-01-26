@@ -1,28 +1,32 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app>
+    <v-container>
+      <chat
+        :adminId="adminId"
+        :adminRoute="adminRoute"
+        :userId="userId"
+        :userName="userName"
+        :serverURL="serverURL"
+        :recieve="recieve"
+        :subscribe="subscribe"
+      />
+    </v-container>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+  data: () => ({
+    adminRoute: '',
+    userId: '',
+    userName: '',
+    adminId: '',
+    serverURL: '',
+    recieve:'',
+    subscribe:'',
+    // recieve:'/receive',
+    // subscribe:'/send',
+  }),
+};
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>

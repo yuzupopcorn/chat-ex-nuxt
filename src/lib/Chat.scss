@@ -1,0 +1,20 @@
+.chat {
+  &-wrap {
+    height: calc(100% - 30px);
+    position: relative;
+    overflow: hidden;
+  }
+  &-container{
+    position:fixed; right: 10px; bottom: 25px; z-index: 99;
+    .v-btn{
+      border: none !important;
+    }
+    .chat-cover-card{
+      box-shadow: rgba(81, 97, 112, 0.3) 0px 0px 24px 0px !important;
+    }
+
+    .chat-button-cover{
+      position:fixed; right: 10px; bottom: 10px;
+    }
+  }
+}

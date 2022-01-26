@@ -1,0 +1,26 @@
+ul {
+  padding:0
+}
+.chat {
+  &-wrap {
+    height: calc(100% - 30px);
+    position: relative;
+    overflow: hidden;
+  }
+  &-form {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+  }
+  &-chat {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 100px;
+    padding: 1rem;
+    overflow-y: auto;
+  }
+}
